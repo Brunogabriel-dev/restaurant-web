@@ -1,11 +1,9 @@
-import React from 'react'
+import HeroSection from './components/HeroSection'
 
 const App = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline bg-white">
-      restaurante
-    </h1>
+      <HeroSection />
     </div>
   )
 }
