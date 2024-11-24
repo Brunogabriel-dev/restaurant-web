@@ -10,7 +10,7 @@ const Dishes = () => {
         ))}
       </div>
     </section>
-  )
+  );
 }
 
-export default Dishes
+export default Dishes;
