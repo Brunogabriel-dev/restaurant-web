@@ -17,11 +17,22 @@ const Mission = () => {
           poster={missionImg}>
             <source src={mission} type="video/mp4" />
           </motion.video>
-          <div className="absolute h-full w-full rounded-3xl bg-black/40">
-          </div>
-          <p className="absolute max-w-lg tracking-tighter lg:text-3xl">
+          <motion.div
+           initial={{ opacity: 0 }}
+           whileInView={{ opacity: 1 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.5, delay: 0.5 }}
+          className="absolute h-full w-full rounded-3xl bg-black/40">
+          </motion.div>
+          <motion.p className="absolute max-w-lg tracking-tighter lg:text-3xl"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 1, delay: 0.5 }}
+
+          >
             {MISSION}
-          </p>
+          </motion.p>
         </div>
       </div>
     </section>
