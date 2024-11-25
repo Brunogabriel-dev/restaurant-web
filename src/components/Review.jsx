@@ -17,11 +17,10 @@ const Review = () => {
           className="rounded-full border" />
           <div className="tracking-tighter">
             <h6>{REVIEW.name}</h6>
+            <p className="text-sm text-neutral-500">{REVIEW.profession}</p>
           </div>
         </div>
-
       </div>
-
     </section>
   )
 }
