@@ -29,12 +29,15 @@ const Review = () => {
        whileInView="show"
        variants={containerVariants}
        viewport={{ once: true }}
-
       className="flex flex-col">
-        <p className="mb-10 text-2xl font-light leading-normal tracking-tighter lg:mx-40 lg:text-[3.5rem]">
+        <motion.p 
+         variants={itemVariants}
+        className="mb-10 text-2xl font-light leading-normal tracking-tighter lg:mx-40 lg:text-[3.5rem]">
           {REVIEW.content}
-        </p>
-        <div className="flex items-center justify-center gap-6">
+        </motion.p>
+        <motion.div 
+         variants={itemVariants}
+        className="flex items-center justify-center gap-6">
           <img 
           src={xaviour} 
           width={80} 
@@ -44,17 +47,24 @@ const Review = () => {
             <h6>{REVIEW.name}</h6>
             <p className="text-sm text-neutral-500">{REVIEW.profession}</p>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
-      <div className="mt-14 flex flex-col items-center justify-center gap-2 md:flex-row">
+      <motion.div 
+        initial="hidden"
+        whileInView="show"
+        variants={itemVariants}
+        viewport={{ once: true }}
+
+      className="mt-14 flex flex-col items-center justify-center gap-2 md:flex-row">
         {[customer1, customer2, customer3, customer4].map((customer, index) => (
-          <img 
+          <motion.img 
+          variants={itemVariants}
           key={index} 
           src={customer} 
           alt="customer" 
           className="h-[300px] w-[200px] rounded-br-3xl rounded-tl-3xl object-cover" />
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }
